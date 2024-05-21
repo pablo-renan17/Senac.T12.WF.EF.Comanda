@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeComandas", "SistemaDeComandas.csproj", "{051B9271-BB18-422C-9C00-CC814432218D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{051B9271-BB18-422C-9C00-CC814432218D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051B9271-BB18-422C-9C00-CC814432218D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051B9271-BB18-422C-9C00-CC814432218D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051B9271-BB18-422C-9C00-CC814432218D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {899D912A-7070-4CDC-8967-F2DC5A4A6684}
+	EndGlobalSection
+EndGlobal
