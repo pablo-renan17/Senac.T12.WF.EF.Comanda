@@ -1,4 +1,4 @@
-﻿namespace SistemaDeComandas
+﻿namespace SistemaDeComandas.Forms
 {
     partial class FrmPrincipal
     {
@@ -32,7 +32,7 @@
             nightButton4 = new ReaLTaiizor.Controls.NightButton();
             nightButton3 = new ReaLTaiizor.Controls.NightButton();
             nightButton2 = new ReaLTaiizor.Controls.NightButton();
-            nightButton1 = new ReaLTaiizor.Controls.NightButton();
+            btnCardapio = new ReaLTaiizor.Controls.NightButton();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             nightTextBox1 = new ReaLTaiizor.Controls.NightTextBox();
             nightForm1.SuspendLayout();
@@ -44,7 +44,7 @@
             nightForm1.Controls.Add(nightButton4);
             nightForm1.Controls.Add(nightButton3);
             nightForm1.Controls.Add(nightButton2);
-            nightForm1.Controls.Add(nightButton1);
+            nightForm1.Controls.Add(btnCardapio);
             nightForm1.Controls.Add(nightControlBox1);
             nightForm1.Controls.Add(nightTextBox1);
             nightForm1.Dock = DockStyle.Fill;
@@ -129,27 +129,28 @@
             nightButton2.TabIndex = 3;
             nightButton2.Text = "Comanda";
             // 
-            // nightButton1
+            // btnCardapio
             // 
-            nightButton1.BackColor = Color.Transparent;
-            nightButton1.DialogResult = DialogResult.None;
-            nightButton1.Font = new Font("Segoe UI", 10F);
-            nightButton1.ForeColor = Color.FromArgb(242, 93, 89);
-            nightButton1.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
-            nightButton1.HoverForeColor = Color.White;
-            nightButton1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            nightButton1.Location = new Point(87, 183);
-            nightButton1.MinimumSize = new Size(144, 47);
-            nightButton1.Name = "nightButton1";
-            nightButton1.NormalBackColor = Color.FromArgb(242, 93, 89);
-            nightButton1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            nightButton1.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
-            nightButton1.PressedForeColor = Color.White;
-            nightButton1.Radius = 20;
-            nightButton1.Size = new Size(284, 85);
-            nightButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            nightButton1.TabIndex = 2;
-            nightButton1.Text = "Cardápio";
+            btnCardapio.BackColor = Color.Transparent;
+            btnCardapio.DialogResult = DialogResult.None;
+            btnCardapio.Font = new Font("Segoe UI", 10F);
+            btnCardapio.ForeColor = Color.FromArgb(242, 93, 89);
+            btnCardapio.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
+            btnCardapio.HoverForeColor = Color.White;
+            btnCardapio.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            btnCardapio.Location = new Point(87, 183);
+            btnCardapio.MinimumSize = new Size(144, 47);
+            btnCardapio.Name = "btnCardapio";
+            btnCardapio.NormalBackColor = Color.FromArgb(242, 93, 89);
+            btnCardapio.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            btnCardapio.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
+            btnCardapio.PressedForeColor = Color.White;
+            btnCardapio.Radius = 20;
+            btnCardapio.Size = new Size(284, 85);
+            btnCardapio.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            btnCardapio.TabIndex = 2;
+            btnCardapio.Text = "Cardápio";
+            btnCardapio.Click += btnCardapio_Click;
             // 
             // nightControlBox1
             // 
@@ -224,6 +225,6 @@
         private ReaLTaiizor.Controls.NightButton nightButton4;
         private ReaLTaiizor.Controls.NightButton nightButton3;
         private ReaLTaiizor.Controls.NightButton nightButton2;
-        private ReaLTaiizor.Controls.NightButton nightButton1;
+        private ReaLTaiizor.Controls.NightButton btnCardapio;
     }
 }
