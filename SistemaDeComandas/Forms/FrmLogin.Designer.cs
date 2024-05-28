@@ -1,4 +1,4 @@
-﻿namespace SistemaDeComandas
+﻿namespace SistemaDeComandas.Forms
 {
     partial class FrmLogin
     {
