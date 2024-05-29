@@ -22,5 +22,11 @@ namespace SistemaDeComandas.Forms
             var frmComanda = new FrmComanda();
             frmComanda.Show();
         }
+
+        private void btnPedidoCozinha_Click(object sender, EventArgs e)
+        {
+            var frmPedidoCozinha = new FrmPedidoCozinha();
+            frmPedidoCozinha.Show();
+        }
     }
 }
