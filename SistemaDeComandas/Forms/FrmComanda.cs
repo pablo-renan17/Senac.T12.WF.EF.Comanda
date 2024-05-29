@@ -7,5 +7,15 @@ namespace SistemaDeComandas.Forms
         {
             InitializeComponent();
         }
+
+        private void nightButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

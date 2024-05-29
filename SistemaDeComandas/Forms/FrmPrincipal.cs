@@ -16,5 +16,11 @@ namespace SistemaDeComandas.Forms
             frmCardapio.Show();
             //incrementar o valor da variavel contador
         }
+
+        private void btnComanda_Click(object sender, EventArgs e)
+        {
+            var frmComanda = new FrmComanda();
+            frmComanda.Show();
+        }
     }
 }

@@ -7,5 +7,10 @@ namespace SistemaDeComandas.Forms
         {
             InitializeComponent();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
