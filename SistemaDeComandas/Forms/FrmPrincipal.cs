@@ -1,4 +1,7 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+using SistemaDeComandas.BancoDeDados;
+
 namespace SistemaDeComandas.Forms
 {
     public partial class FrmPrincipal : Form
@@ -6,6 +9,18 @@ namespace SistemaDeComandas.Forms
         public FrmPrincipal()
         {
             InitializeComponent();
+            CriarBancoDeDados();
+        }
+
+        //metodo para criar o banco de dados
+        void CriarBancoDeDados()
+        {
+            //criando um novo contexto do banco
+            using (var banco = new ComandaContexto())
+            {
+                //criar as tabelas do banco
+                banco.Database.Migrate();
+            }
         }
 
         private void btnCardapio_Click(object sender, EventArgs e)
