@@ -28,62 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            nightForm1 = new ReaLTaiizor.Forms.NightForm();
-            nightButton4 = new ReaLTaiizor.Controls.NightButton();
+            btnUsuarios = new ReaLTaiizor.Forms.NightForm();
+            btnUsuario = new ReaLTaiizor.Controls.NightButton();
             btnPedidoCozinha = new ReaLTaiizor.Controls.NightButton();
             btnComanda = new ReaLTaiizor.Controls.NightButton();
             btnCardapio = new ReaLTaiizor.Controls.NightButton();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             nightTextBox1 = new ReaLTaiizor.Controls.NightTextBox();
-            nightForm1.SuspendLayout();
+            btnUsuarios.SuspendLayout();
             SuspendLayout();
             // 
-            // nightForm1
+            // btnUsuarios
             // 
-            nightForm1.BackColor = Color.FromArgb(40, 48, 51);
-            nightForm1.Controls.Add(nightButton4);
-            nightForm1.Controls.Add(btnPedidoCozinha);
-            nightForm1.Controls.Add(btnComanda);
-            nightForm1.Controls.Add(btnCardapio);
-            nightForm1.Controls.Add(nightControlBox1);
-            nightForm1.Controls.Add(nightTextBox1);
-            nightForm1.Dock = DockStyle.Fill;
-            nightForm1.DrawIcon = false;
-            nightForm1.Font = new Font("Segoe UI", 9F);
-            nightForm1.HeadColor = Color.FromArgb(50, 58, 61);
-            nightForm1.Location = new Point(0, 0);
-            nightForm1.MinimumSize = new Size(100, 42);
-            nightForm1.Name = "nightForm1";
-            nightForm1.Padding = new Padding(0, 31, 0, 0);
-            nightForm1.RightToLeft = RightToLeft.Yes;
-            nightForm1.Size = new Size(800, 450);
-            nightForm1.TabIndex = 0;
-            nightForm1.TabStop = false;
-            nightForm1.Text = "FrmPrincipal";
-            nightForm1.TextAlignment = ReaLTaiizor.Forms.NightForm.Alignment.Left;
-            nightForm1.TitleBarTextColor = Color.Gainsboro;
+            btnUsuarios.BackColor = Color.FromArgb(40, 48, 51);
+            btnUsuarios.Controls.Add(btnUsuario);
+            btnUsuarios.Controls.Add(btnPedidoCozinha);
+            btnUsuarios.Controls.Add(btnComanda);
+            btnUsuarios.Controls.Add(btnCardapio);
+            btnUsuarios.Controls.Add(nightControlBox1);
+            btnUsuarios.Controls.Add(nightTextBox1);
+            btnUsuarios.Dock = DockStyle.Fill;
+            btnUsuarios.DrawIcon = false;
+            btnUsuarios.Font = new Font("Segoe UI", 9F);
+            btnUsuarios.HeadColor = Color.FromArgb(50, 58, 61);
+            btnUsuarios.Location = new Point(0, 0);
+            btnUsuarios.MinimumSize = new Size(100, 42);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Padding = new Padding(0, 31, 0, 0);
+            btnUsuarios.RightToLeft = RightToLeft.Yes;
+            btnUsuarios.Size = new Size(800, 450);
+            btnUsuarios.TabIndex = 0;
+            btnUsuarios.TabStop = false;
+            btnUsuarios.Text = "FrmPrincipal";
+            btnUsuarios.TextAlignment = ReaLTaiizor.Forms.NightForm.Alignment.Left;
+            btnUsuarios.TitleBarTextColor = Color.Gainsboro;
             // 
-            // nightButton4
+            // btnUsuario
             // 
-            nightButton4.BackColor = Color.Transparent;
-            nightButton4.DialogResult = DialogResult.None;
-            nightButton4.Font = new Font("Segoe UI", 10F);
-            nightButton4.ForeColor = Color.FromArgb(242, 93, 89);
-            nightButton4.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
-            nightButton4.HoverForeColor = Color.White;
-            nightButton4.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            nightButton4.Location = new Point(397, 273);
-            nightButton4.MinimumSize = new Size(144, 47);
-            nightButton4.Name = "nightButton4";
-            nightButton4.NormalBackColor = Color.FromArgb(242, 93, 89);
-            nightButton4.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            nightButton4.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
-            nightButton4.PressedForeColor = Color.White;
-            nightButton4.Radius = 20;
-            nightButton4.Size = new Size(299, 89);
-            nightButton4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            nightButton4.TabIndex = 5;
-            nightButton4.Text = "Usuários";
+            btnUsuario.BackColor = Color.Transparent;
+            btnUsuario.DialogResult = DialogResult.None;
+            btnUsuario.Font = new Font("Segoe UI", 10F);
+            btnUsuario.ForeColor = Color.FromArgb(242, 93, 89);
+            btnUsuario.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
+            btnUsuario.HoverForeColor = Color.White;
+            btnUsuario.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            btnUsuario.Location = new Point(397, 273);
+            btnUsuario.MinimumSize = new Size(144, 47);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.NormalBackColor = Color.FromArgb(242, 93, 89);
+            btnUsuario.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            btnUsuario.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
+            btnUsuario.PressedForeColor = Color.White;
+            btnUsuario.Radius = 20;
+            btnUsuario.Size = new Size(299, 89);
+            btnUsuario.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            btnUsuario.TabIndex = 5;
+            btnUsuario.Text = "Usuários";
+            btnUsuario.Click += btnUsuario_Click;
             // 
             // btnPedidoCozinha
             // 
@@ -208,23 +209,23 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(nightForm1);
+            Controls.Add(btnUsuarios);
             FormBorderStyle = FormBorderStyle.None;
             MaximumSize = new Size(1600, 860);
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
             TransparencyKey = Color.Fuchsia;
-            nightForm1.ResumeLayout(false);
+            btnUsuarios.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ReaLTaiizor.Forms.NightForm nightForm1;
+        private ReaLTaiizor.Forms.NightForm btnUsuarios;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private ReaLTaiizor.Controls.NightTextBox nightTextBox1;
-        private ReaLTaiizor.Controls.NightButton nightButton4;
+        private ReaLTaiizor.Controls.NightButton btnUsuario;
         private ReaLTaiizor.Controls.NightButton btnPedidoCozinha;
         private ReaLTaiizor.Controls.NightButton btnComanda;
         private ReaLTaiizor.Controls.NightButton btnCardapio;

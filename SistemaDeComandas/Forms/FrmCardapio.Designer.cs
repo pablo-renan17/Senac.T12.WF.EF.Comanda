@@ -30,11 +30,11 @@
         {
             nightForm1 = new ReaLTaiizor.Forms.NightForm();
             btnVoltar = new ReaLTaiizor.Controls.NightButton();
-            nightButton3 = new ReaLTaiizor.Controls.NightButton();
-            nightButton2 = new ReaLTaiizor.Controls.NightButton();
-            nightButton1 = new ReaLTaiizor.Controls.NightButton();
-            nightPanel1 = new ReaLTaiizor.Controls.NightPanel();
-            nightTextBox1 = new ReaLTaiizor.Controls.NightTextBox();
+            btnEditar = new ReaLTaiizor.Controls.NightButton();
+            btnExcluir = new ReaLTaiizor.Controls.NightButton();
+            btnAdicionarItem = new ReaLTaiizor.Controls.NightButton();
+            dgvCardapio = new ReaLTaiizor.Controls.NightPanel();
+            txtPesquisa = new ReaLTaiizor.Controls.NightTextBox();
             nightForm1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,11 +42,11 @@
             // 
             nightForm1.BackColor = Color.FromArgb(40, 48, 51);
             nightForm1.Controls.Add(btnVoltar);
-            nightForm1.Controls.Add(nightButton3);
-            nightForm1.Controls.Add(nightButton2);
-            nightForm1.Controls.Add(nightButton1);
-            nightForm1.Controls.Add(nightPanel1);
-            nightForm1.Controls.Add(nightTextBox1);
+            nightForm1.Controls.Add(btnEditar);
+            nightForm1.Controls.Add(btnExcluir);
+            nightForm1.Controls.Add(btnAdicionarItem);
+            nightForm1.Controls.Add(dgvCardapio);
+            nightForm1.Controls.Add(txtPesquisa);
             nightForm1.Dock = DockStyle.Fill;
             nightForm1.DrawIcon = false;
             nightForm1.Font = new Font("Segoe UI", 9F);
@@ -84,108 +84,108 @@
             btnVoltar.Text = "< Voltar";
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // nightButton3
+            // btnEditar
             // 
-            nightButton3.BackColor = Color.Transparent;
-            nightButton3.DialogResult = DialogResult.None;
-            nightButton3.Font = new Font("Segoe UI", 10F);
-            nightButton3.ForeColor = Color.FromArgb(128, 128, 255);
-            nightButton3.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
-            nightButton3.HoverForeColor = Color.White;
-            nightButton3.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            nightButton3.Location = new Point(606, 451);
-            nightButton3.MinimumSize = new Size(144, 47);
-            nightButton3.Name = "nightButton3";
-            nightButton3.NormalBackColor = Color.FromArgb(128, 128, 255);
-            nightButton3.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            nightButton3.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
-            nightButton3.PressedForeColor = Color.White;
-            nightButton3.Radius = 20;
-            nightButton3.Size = new Size(144, 47);
-            nightButton3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            nightButton3.TabIndex = 5;
-            nightButton3.Text = "# Editar";
+            btnEditar.BackColor = Color.Transparent;
+            btnEditar.DialogResult = DialogResult.None;
+            btnEditar.Font = new Font("Segoe UI", 10F);
+            btnEditar.ForeColor = Color.FromArgb(128, 128, 255);
+            btnEditar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
+            btnEditar.HoverForeColor = Color.White;
+            btnEditar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            btnEditar.Location = new Point(606, 451);
+            btnEditar.MinimumSize = new Size(144, 47);
+            btnEditar.Name = "btnEditar";
+            btnEditar.NormalBackColor = Color.FromArgb(128, 128, 255);
+            btnEditar.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            btnEditar.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
+            btnEditar.PressedForeColor = Color.White;
+            btnEditar.Radius = 20;
+            btnEditar.Size = new Size(144, 47);
+            btnEditar.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            btnEditar.TabIndex = 5;
+            btnEditar.Text = "# Editar";
             // 
-            // nightButton2
+            // btnExcluir
             // 
-            nightButton2.BackColor = Color.Transparent;
-            nightButton2.DialogResult = DialogResult.None;
-            nightButton2.Font = new Font("Segoe UI", 10F);
-            nightButton2.ForeColor = Color.FromArgb(242, 93, 89);
-            nightButton2.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
-            nightButton2.HoverForeColor = Color.White;
-            nightButton2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            nightButton2.Location = new Point(446, 451);
-            nightButton2.MinimumSize = new Size(144, 47);
-            nightButton2.Name = "nightButton2";
-            nightButton2.NormalBackColor = Color.FromArgb(242, 93, 89);
-            nightButton2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            nightButton2.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
-            nightButton2.PressedForeColor = Color.White;
-            nightButton2.Radius = 20;
-            nightButton2.Size = new Size(144, 47);
-            nightButton2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            nightButton2.TabIndex = 4;
-            nightButton2.Text = "X Excluir";
+            btnExcluir.BackColor = Color.Transparent;
+            btnExcluir.DialogResult = DialogResult.None;
+            btnExcluir.Font = new Font("Segoe UI", 10F);
+            btnExcluir.ForeColor = Color.FromArgb(242, 93, 89);
+            btnExcluir.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
+            btnExcluir.HoverForeColor = Color.White;
+            btnExcluir.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            btnExcluir.Location = new Point(446, 451);
+            btnExcluir.MinimumSize = new Size(144, 47);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.NormalBackColor = Color.FromArgb(242, 93, 89);
+            btnExcluir.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            btnExcluir.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
+            btnExcluir.PressedForeColor = Color.White;
+            btnExcluir.Radius = 20;
+            btnExcluir.Size = new Size(144, 47);
+            btnExcluir.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            btnExcluir.TabIndex = 4;
+            btnExcluir.Text = "X Excluir";
             // 
-            // nightButton1
+            // btnAdicionarItem
             // 
-            nightButton1.BackColor = Color.Transparent;
-            nightButton1.DialogResult = DialogResult.None;
-            nightButton1.Font = new Font("Segoe UI", 10F);
-            nightButton1.ForeColor = Color.FromArgb(128, 255, 128);
-            nightButton1.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
-            nightButton1.HoverForeColor = Color.White;
-            nightButton1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            nightButton1.Location = new Point(58, 135);
-            nightButton1.MinimumSize = new Size(144, 47);
-            nightButton1.Name = "nightButton1";
-            nightButton1.NormalBackColor = Color.Lime;
-            nightButton1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            nightButton1.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
-            nightButton1.PressedForeColor = Color.White;
-            nightButton1.Radius = 20;
-            nightButton1.Size = new Size(144, 47);
-            nightButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            nightButton1.TabIndex = 3;
-            nightButton1.Text = "+ Item Cardápio";
+            btnAdicionarItem.BackColor = Color.Transparent;
+            btnAdicionarItem.DialogResult = DialogResult.None;
+            btnAdicionarItem.Font = new Font("Segoe UI", 10F);
+            btnAdicionarItem.ForeColor = Color.FromArgb(128, 255, 128);
+            btnAdicionarItem.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
+            btnAdicionarItem.HoverForeColor = Color.White;
+            btnAdicionarItem.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            btnAdicionarItem.Location = new Point(58, 135);
+            btnAdicionarItem.MinimumSize = new Size(144, 47);
+            btnAdicionarItem.Name = "btnAdicionarItem";
+            btnAdicionarItem.NormalBackColor = Color.Lime;
+            btnAdicionarItem.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            btnAdicionarItem.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
+            btnAdicionarItem.PressedForeColor = Color.White;
+            btnAdicionarItem.Radius = 20;
+            btnAdicionarItem.Size = new Size(144, 47);
+            btnAdicionarItem.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            btnAdicionarItem.TabIndex = 3;
+            btnAdicionarItem.Text = "+ Item Cardápio";
             // 
-            // nightPanel1
+            // dgvCardapio
             // 
-            nightPanel1.ForeColor = Color.FromArgb(250, 250, 250);
-            nightPanel1.LeftSideColor = Color.FromArgb(242, 93, 89);
-            nightPanel1.Location = new Point(58, 203);
-            nightPanel1.Name = "nightPanel1";
-            nightPanel1.RightSideColor = Color.FromArgb(41, 44, 61);
-            nightPanel1.Side = ReaLTaiizor.Controls.NightPanel.PanelSide.Left;
-            nightPanel1.Size = new Size(692, 222);
-            nightPanel1.TabIndex = 2;
+            dgvCardapio.ForeColor = Color.FromArgb(250, 250, 250);
+            dgvCardapio.LeftSideColor = Color.FromArgb(242, 93, 89);
+            dgvCardapio.Location = new Point(58, 203);
+            dgvCardapio.Name = "dgvCardapio";
+            dgvCardapio.RightSideColor = Color.FromArgb(41, 44, 61);
+            dgvCardapio.Side = ReaLTaiizor.Controls.NightPanel.PanelSide.Left;
+            dgvCardapio.Size = new Size(692, 222);
+            dgvCardapio.TabIndex = 2;
             // 
-            // nightTextBox1
+            // txtPesquisa
             // 
-            nightTextBox1.ActiveBorderColor = Color.FromArgb(242, 93, 89);
-            nightTextBox1.BackColor = Color.FromArgb(43, 48, 67);
-            nightTextBox1.BaseBackColor = Color.FromArgb(43, 48, 67);
-            nightTextBox1.ColorBordersOnEnter = true;
-            nightTextBox1.DisableBorderColor = Color.FromArgb(60, 63, 80);
-            nightTextBox1.Font = new Font("Segoe UI", 10F);
-            nightTextBox1.ForeColor = Color.FromArgb(127, 131, 140);
-            nightTextBox1.Image = null;
-            nightTextBox1.Location = new Point(58, 62);
-            nightTextBox1.MaxLength = 32767;
-            nightTextBox1.Multiline = false;
-            nightTextBox1.Name = "nightTextBox1";
-            nightTextBox1.ReadOnly = false;
-            nightTextBox1.ShortcutsEnabled = true;
-            nightTextBox1.ShowBottomBorder = true;
-            nightTextBox1.ShowTopBorder = true;
-            nightTextBox1.Size = new Size(692, 50);
-            nightTextBox1.TabIndex = 1;
-            nightTextBox1.Text = "Pesquisar 🔍";
-            nightTextBox1.TextAlignment = HorizontalAlignment.Left;
-            nightTextBox1.UseSystemPasswordChar = false;
-            nightTextBox1.Watermark = "";
-            nightTextBox1.WatermarkColor = Color.FromArgb(116, 120, 129);
+            txtPesquisa.ActiveBorderColor = Color.FromArgb(242, 93, 89);
+            txtPesquisa.BackColor = Color.FromArgb(43, 48, 67);
+            txtPesquisa.BaseBackColor = Color.FromArgb(43, 48, 67);
+            txtPesquisa.ColorBordersOnEnter = true;
+            txtPesquisa.DisableBorderColor = Color.FromArgb(60, 63, 80);
+            txtPesquisa.Font = new Font("Segoe UI", 10F);
+            txtPesquisa.ForeColor = Color.FromArgb(127, 131, 140);
+            txtPesquisa.Image = null;
+            txtPesquisa.Location = new Point(58, 62);
+            txtPesquisa.MaxLength = 32767;
+            txtPesquisa.Multiline = false;
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.ReadOnly = false;
+            txtPesquisa.ShortcutsEnabled = true;
+            txtPesquisa.ShowBottomBorder = true;
+            txtPesquisa.ShowTopBorder = true;
+            txtPesquisa.Size = new Size(692, 50);
+            txtPesquisa.TabIndex = 1;
+            txtPesquisa.Text = "Pesquisar 🔍";
+            txtPesquisa.TextAlignment = HorizontalAlignment.Left;
+            txtPesquisa.UseSystemPasswordChar = false;
+            txtPesquisa.Watermark = "";
+            txtPesquisa.WatermarkColor = Color.FromArgb(116, 120, 129);
             // 
             // FrmCardapio
             // 
@@ -206,11 +206,11 @@
         #endregion
 
         private ReaLTaiizor.Forms.NightForm nightForm1;
-        private ReaLTaiizor.Controls.NightTextBox nightTextBox1;
-        private ReaLTaiizor.Controls.NightButton nightButton1;
-        private ReaLTaiizor.Controls.NightPanel nightPanel1;
-        private ReaLTaiizor.Controls.NightButton nightButton3;
-        private ReaLTaiizor.Controls.NightButton nightButton2;
+        private ReaLTaiizor.Controls.NightTextBox txtPesquisa;
+        private ReaLTaiizor.Controls.NightButton btnAdicionarItem;
+        private ReaLTaiizor.Controls.NightPanel dgvCardapio;
+        private ReaLTaiizor.Controls.NightButton btnEditar;
+        private ReaLTaiizor.Controls.NightButton btnExcluir;
         private ReaLTaiizor.Controls.NightButton btnVoltar;
     }
 }

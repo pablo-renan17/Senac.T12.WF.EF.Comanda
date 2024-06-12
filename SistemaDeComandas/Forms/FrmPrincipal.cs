@@ -43,5 +43,11 @@ namespace SistemaDeComandas.Forms
             var frmPedidoCozinha = new FrmPedidoCozinha();
             frmPedidoCozinha.ShowDialog();
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            var frmUsuario = new FrmUsuario();
+            frmUsuario.ShowDialog();
+        }
     }
 }
