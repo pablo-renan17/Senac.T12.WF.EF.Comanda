@@ -12,7 +12,10 @@ namespace SistemaDeComandas.Modelos
         public int Id { get; set; }
         public string Titulo { get; set; }
         public string Descricao { get; set; }
+        //[Required]
+        //required significado que eh NOT NULL no banco
         public decimal Preco { get; set; }
+        //perguntar se eh correto usar bool, mesmo que no banco eh INT
         public bool PossuiPreparo { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace SistemaDeComandas.Modelos
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string ComandaId { get; set; }
+        public int ComandaId { get; set; }
         public int SituacaoId { get; set; } = 1;
         //virtual, pq nao quero ela no banco
         public virtual ICollection<PedidoCozinhaItem> PedidoCozinhaItems { get; set; }

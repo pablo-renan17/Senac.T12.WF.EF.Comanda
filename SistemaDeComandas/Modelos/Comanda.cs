@@ -17,6 +17,7 @@ namespace SistemaDeComandas.Modelos
         public string NomeCliente { get; set; }
         //colocando valor padrao como 1.
         public int SituacaoComanda { get; set; } = 1;
+        //esse collection so server pro c# navegar, nao tem como comparar com algo do dbBeaver por exemplo
         public ICollection<ComandaItem> ComandaItems { get; set;}
         
     }

@@ -11,7 +11,9 @@ namespace SistemaDeComandas.Modelos
         public int Id { get; set; }
         public int CardapioItemId { get; set; }
         public virtual CardapioItem CardapioItem { get; set; }
+        //Cardapio
         public int ComandaId { get; set; }
+        //essa virtual indica quem eh o pai dele(comandaItem qtem um paiChamado comanda)
         public virtual Comanda Comanda { get; set; }
     }
 }
