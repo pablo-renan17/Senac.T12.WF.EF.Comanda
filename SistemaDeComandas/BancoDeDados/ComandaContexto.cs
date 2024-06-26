@@ -17,6 +17,7 @@ namespace SistemaDeComandas.BancoDeDados
         public DbSet<ComandaItem> ComandaItems { get; set; }
         public DbSet<PedidoCozinha> PedidoCozinhas { get; set; }
         public DbSet<PedidoCozinhaItem> PedidoCozinhaItems { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         //metodo para configurar banco(para abrir rapido e so escrever override onconfiure e depois enter)
         //serve para configurar a conexao do banco de dados
