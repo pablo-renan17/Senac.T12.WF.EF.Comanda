@@ -7,5 +7,6 @@ namespace SistemaDeComandas.Forms
         {
             InitializeComponent();
         }
+
     }
 }
