@@ -62,6 +62,7 @@
             btnUsuarios.Text = "FrmPrincipal";
             btnUsuarios.TextAlignment = ReaLTaiizor.Forms.NightForm.Alignment.Left;
             btnUsuarios.TitleBarTextColor = Color.Gainsboro;
+            btnUsuarios.Click += btnUsuarios_Click;
             // 
             // btnUsuario
             // 

@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using ReaLTaiizor.Extension;
 using SistemaDeComandas.BancoDeDados;
 using SistemaDeComandas.Modelos;
 
@@ -17,9 +18,21 @@ namespace SistemaDeComandas.Forms
         private void CriarUsuarioAdmin()
         {
             //acessa o banco de dados
-            using(var banco = new ComandaContexto())
+            using (var banco = new ComandaContexto())
             {
                 //cria um novo usuario
+                //FirstOrDefault retorna o primeiro valor que achar, e se nao tiver fica nulo
+                //First retorna o primeiro valor, e senao achar da erro
+                //Contains usa like, (se string passado estiver na string que esta sendo selecionada)
+                var usuarioExiste = banco
+                    .Usuarios
+                    .FirstOrDefault(u => 
+                    u.emailUsuario
+                    .Equals("admin@example.com"));
+
+                if (usuarioExiste != null)
+                    return;
+
                 var novoUsuario = new Usuario();
                 novoUsuario.nomeUsuario = "admin";
                 novoUsuario.emailUsuario = "admin@example.com";
@@ -71,5 +84,9 @@ namespace SistemaDeComandas.Forms
             frmUsuario.ShowDialog();
         }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

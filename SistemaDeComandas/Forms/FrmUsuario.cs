@@ -15,6 +15,8 @@ namespace SistemaDeComandas.Forms
         bool isFirstNome = true;
         bool isFirstEmail = true;
         bool isFirstSenha = true;
+        private bool ehNovoUsuario;
+
         public FrmUsuario()
         {
             InitializeComponent();
@@ -77,13 +79,29 @@ namespace SistemaDeComandas.Forms
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CriarUsuario();
-            //AtualizarUsuario();
+            if(ehNovoUsuario)
+                CriarUsuario();
+            else
+                AtualizarUsuario();
         }
 
         private void AtualizarUsuario()
         {
-            throw new NotImplementedException();
+            using(var banco = new ComandaContexto())
+            {
+                //buscar o usuario pelo ID
+                var usuario = banco.Usuarios.First( usuario =>
+                    usuario.idUsuario == 1);
+
+                //atualizar as propriedades
+                usuario.nomeUsuario = txtNome.Text;
+                usuario.emailUsuario = txtEmail.Text;
+                usuario.senhaUsuario = txtSenha.Text;
+
+                //salvar as alterações
+                banco.SaveChanges();
+            }
+
         }
 
         private void CriarUsuario()
@@ -122,7 +140,7 @@ namespace SistemaDeComandas.Forms
 
         private void CarregarUsuario()
         {
-            using(var banco = new ComandaContexto())
+            using (var banco = new ComandaContexto())
             {
                 //consulta todos os usuarios do banco(SELECT * FROM Usuarios)
                 var usuarios = banco.Usuarios.ToList();
@@ -135,5 +153,19 @@ namespace SistemaDeComandas.Forms
             this.Close();
         }
 
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            ehNovoUsuario = true;
+
+            txtNome.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ehNovoUsuario = false;
+        }
     }
 }

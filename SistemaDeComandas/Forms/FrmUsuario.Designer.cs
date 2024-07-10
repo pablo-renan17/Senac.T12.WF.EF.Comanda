@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             nightForm1 = new ReaLTaiizor.Forms.NightForm();
+            dgvUsuario = new DataGridView();
+            btnVoltar = new ReaLTaiizor.Controls.NightButton();
             btnEditar = new ReaLTaiizor.Controls.NightButton();
             btnCancelar = new ReaLTaiizor.Controls.NightButton();
             btnSalvar = new ReaLTaiizor.Controls.NightButton();
             btnExcluir = new ReaLTaiizor.Controls.NightButton();
-            cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
-            dgvUsuario = new DataGridView();
             btnNovo = new ReaLTaiizor.Controls.NightButton();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
             txtSenha = new ReaLTaiizor.Controls.NightTextBox();
@@ -46,9 +46,7 @@
             nightLabel2 = new ReaLTaiizor.Controls.NightLabel();
             txtNome = new ReaLTaiizor.Controls.NightTextBox();
             nightLabel1 = new ReaLTaiizor.Controls.NightLabel();
-            btnVoltar = new ReaLTaiizor.Controls.NightButton();
             nightForm1.SuspendLayout();
-            cyberGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
             cyberGroupBox1.SuspendLayout();
             SuspendLayout();
@@ -56,12 +54,12 @@
             // nightForm1
             // 
             nightForm1.BackColor = Color.FromArgb(40, 48, 51);
+            nightForm1.Controls.Add(dgvUsuario);
             nightForm1.Controls.Add(btnVoltar);
             nightForm1.Controls.Add(btnEditar);
             nightForm1.Controls.Add(btnCancelar);
             nightForm1.Controls.Add(btnSalvar);
             nightForm1.Controls.Add(btnExcluir);
-            nightForm1.Controls.Add(cyberGroupBox2);
             nightForm1.Controls.Add(btnNovo);
             nightForm1.Dock = DockStyle.Fill;
             nightForm1.DrawIcon = false;
@@ -76,6 +74,61 @@
             nightForm1.Text = "FrmUsuario";
             nightForm1.TextAlignment = ReaLTaiizor.Forms.NightForm.Alignment.Left;
             nightForm1.TitleBarTextColor = Color.Gainsboro;
+            // 
+            // dgvUsuario
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvUsuario.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvUsuario.Location = new Point(59, 374);
+            dgvUsuario.Name = "dgvUsuario";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvUsuario.Size = new Size(675, 180);
+            dgvUsuario.TabIndex = 0;
+            // 
+            // btnVoltar
+            // 
+            btnVoltar.BackColor = Color.Transparent;
+            btnVoltar.DialogResult = DialogResult.None;
+            btnVoltar.Font = new Font("Segoe UI", 10F);
+            btnVoltar.ForeColor = Color.FromArgb(242, 93, 89);
+            btnVoltar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
+            btnVoltar.HoverForeColor = Color.White;
+            btnVoltar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            btnVoltar.Location = new Point(30, 632);
+            btnVoltar.MinimumSize = new Size(144, 47);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.NormalBackColor = Color.FromArgb(242, 93, 89);
+            btnVoltar.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            btnVoltar.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
+            btnVoltar.PressedForeColor = Color.White;
+            btnVoltar.Radius = 20;
+            btnVoltar.Size = new Size(144, 47);
+            btnVoltar.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            btnVoltar.TabIndex = 20;
+            btnVoltar.Text = "< Voltar";
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // btnEditar
             // 
@@ -98,6 +151,7 @@
             btnEditar.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             btnEditar.TabIndex = 19;
             btnEditar.Text = "# Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnCancelar
             // 
@@ -166,71 +220,6 @@
             btnExcluir.TabIndex = 16;
             btnExcluir.Text = "X Excluir";
             // 
-            // cyberGroupBox2
-            // 
-            cyberGroupBox2.Alpha = 10;
-            cyberGroupBox2.BackColor = Color.Transparent;
-            cyberGroupBox2.Background = true;
-            cyberGroupBox2.Background_WidthPen = 2F;
-            cyberGroupBox2.BackgroundPen = true;
-            cyberGroupBox2.ColorBackground = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorBackground_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberGroupBox2.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberGroupBox2.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.Controls.Add(dgvUsuario);
-            cyberGroupBox2.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberGroupBox2.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberGroupBox2.Lighting = false;
-            cyberGroupBox2.LinearGradient_Background = false;
-            cyberGroupBox2.LinearGradientPen = false;
-            cyberGroupBox2.Location = new Point(41, 371);
-            cyberGroupBox2.Name = "cyberGroupBox2";
-            cyberGroupBox2.PenWidth = 15;
-            cyberGroupBox2.RGB = false;
-            cyberGroupBox2.Rounding = true;
-            cyberGroupBox2.RoundingInt = 20;
-            cyberGroupBox2.Size = new Size(718, 187);
-            cyberGroupBox2.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox2.TabIndex = 15;
-            cyberGroupBox2.Tag = "Cyber";
-            cyberGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberGroupBox2.Timer_RGB = 300;
-            // 
-            // dgvUsuario
-            // 
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(245, 245, 245);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvUsuario.DefaultCellStyle = dataGridViewCellStyle5;
-            dgvUsuario.Location = new Point(30, 20);
-            dgvUsuario.Name = "dgvUsuario";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            dgvUsuario.Size = new Size(662, 150);
-            dgvUsuario.TabIndex = 0;
-            // 
             // btnNovo
             // 
             btnNovo.BackColor = Color.Transparent;
@@ -252,6 +241,7 @@
             btnNovo.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             btnNovo.TabIndex = 14;
             btnNovo.Text = "! Novo";
+            btnNovo.Click += btnNovo_Click;
             // 
             // cyberGroupBox1
             // 
@@ -411,29 +401,6 @@
             nightLabel1.TabIndex = 2;
             nightLabel1.Text = "Nome";
             // 
-            // btnVoltar
-            // 
-            btnVoltar.BackColor = Color.Transparent;
-            btnVoltar.DialogResult = DialogResult.None;
-            btnVoltar.Font = new Font("Segoe UI", 10F);
-            btnVoltar.ForeColor = Color.FromArgb(242, 93, 89);
-            btnVoltar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
-            btnVoltar.HoverForeColor = Color.White;
-            btnVoltar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnVoltar.Location = new Point(30, 632);
-            btnVoltar.MinimumSize = new Size(144, 47);
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.NormalBackColor = Color.FromArgb(242, 93, 89);
-            btnVoltar.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            btnVoltar.PressedBackColor = Color.FromArgb(100, 242, 93, 89);
-            btnVoltar.PressedForeColor = Color.White;
-            btnVoltar.Radius = 20;
-            btnVoltar.Size = new Size(144, 47);
-            btnVoltar.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            btnVoltar.TabIndex = 20;
-            btnVoltar.Text = "< Voltar";
-            btnVoltar.Click += btnVoltar_Click;
-            // 
             // FrmUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -448,7 +415,6 @@
             Text = "FrmUsuario";
             TransparencyKey = Color.Fuchsia;
             nightForm1.ResumeLayout(false);
-            cyberGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).EndInit();
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
@@ -466,12 +432,11 @@
         private ReaLTaiizor.Controls.NightLabel nightLabel2;
         private ReaLTaiizor.Controls.NightTextBox txtNome;
         private ReaLTaiizor.Controls.NightLabel nightLabel1;
-        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
         private ReaLTaiizor.Controls.NightButton btnExcluir;
         private ReaLTaiizor.Controls.NightButton btnEditar;
         private ReaLTaiizor.Controls.NightButton btnCancelar;
         private ReaLTaiizor.Controls.NightButton btnSalvar;
-        private DataGridView dgvUsuario;
         private ReaLTaiizor.Controls.NightButton btnVoltar;
+        private DataGridView dgvUsuario;
     }
 }
