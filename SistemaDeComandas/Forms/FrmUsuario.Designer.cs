@@ -40,6 +40,8 @@
             btnExcluir = new ReaLTaiizor.Controls.NightButton();
             btnNovo = new ReaLTaiizor.Controls.NightButton();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
+            nightLabel4 = new ReaLTaiizor.Controls.NightLabel();
+            txtId = new ReaLTaiizor.Controls.NightTextBox();
             txtSenha = new ReaLTaiizor.Controls.NightTextBox();
             nightLabel3 = new ReaLTaiizor.Controls.NightLabel();
             txtEmail = new ReaLTaiizor.Controls.NightTextBox();
@@ -69,7 +71,7 @@
             nightForm1.MinimumSize = new Size(100, 42);
             nightForm1.Name = "nightForm1";
             nightForm1.Padding = new Padding(0, 31, 0, 0);
-            nightForm1.Size = new Size(800, 694);
+            nightForm1.Size = new Size(800, 751);
             nightForm1.TabIndex = 0;
             nightForm1.Text = "FrmUsuario";
             nightForm1.TextAlignment = ReaLTaiizor.Forms.NightForm.Alignment.Left;
@@ -94,7 +96,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvUsuario.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvUsuario.Location = new Point(59, 374);
+            dgvUsuario.Location = new Point(58, 439);
             dgvUsuario.Name = "dgvUsuario";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
@@ -106,6 +108,7 @@
             dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvUsuario.Size = new Size(675, 180);
             dgvUsuario.TabIndex = 0;
+            dgvUsuario.CellClick += dgvUsuario_CellClick;
             // 
             // btnVoltar
             // 
@@ -116,7 +119,7 @@
             btnVoltar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
             btnVoltar.HoverForeColor = Color.White;
             btnVoltar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnVoltar.Location = new Point(30, 632);
+            btnVoltar.Location = new Point(30, 691);
             btnVoltar.MinimumSize = new Size(144, 47);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.NormalBackColor = Color.FromArgb(242, 93, 89);
@@ -139,7 +142,7 @@
             btnEditar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
             btnEditar.HoverForeColor = Color.White;
             btnEditar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnEditar.Location = new Point(180, 579);
+            btnEditar.Location = new Point(180, 638);
             btnEditar.MinimumSize = new Size(144, 47);
             btnEditar.Name = "btnEditar";
             btnEditar.NormalBackColor = Color.FromArgb(255, 255, 128);
@@ -162,7 +165,7 @@
             btnCancelar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
             btnCancelar.HoverForeColor = Color.White;
             btnCancelar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnCancelar.Location = new Point(630, 579);
+            btnCancelar.Location = new Point(630, 638);
             btnCancelar.MinimumSize = new Size(144, 47);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.NormalBackColor = Color.Red;
@@ -184,7 +187,7 @@
             btnSalvar.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
             btnSalvar.HoverForeColor = Color.White;
             btnSalvar.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnSalvar.Location = new Point(330, 579);
+            btnSalvar.Location = new Point(330, 638);
             btnSalvar.MinimumSize = new Size(144, 47);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.NormalBackColor = Color.FromArgb(128, 128, 255);
@@ -207,7 +210,7 @@
             btnExcluir.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
             btnExcluir.HoverForeColor = Color.White;
             btnExcluir.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnExcluir.Location = new Point(480, 579);
+            btnExcluir.Location = new Point(480, 638);
             btnExcluir.MinimumSize = new Size(144, 47);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.NormalBackColor = Color.FromArgb(242, 93, 89);
@@ -229,7 +232,7 @@
             btnNovo.HoverBackColor = Color.FromArgb(50, 242, 93, 89);
             btnNovo.HoverForeColor = Color.White;
             btnNovo.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            btnNovo.Location = new Point(30, 579);
+            btnNovo.Location = new Point(30, 638);
             btnNovo.MinimumSize = new Size(144, 47);
             btnNovo.Name = "btnNovo";
             btnNovo.NormalBackColor = Color.FromArgb(128, 255, 128);
@@ -257,6 +260,8 @@
             cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
             cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
             cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.Controls.Add(nightLabel4);
+            cyberGroupBox1.Controls.Add(txtId);
             cyberGroupBox1.Controls.Add(txtSenha);
             cyberGroupBox1.Controls.Add(nightLabel3);
             cyberGroupBox1.Controls.Add(txtEmail);
@@ -274,12 +279,53 @@
             cyberGroupBox1.RGB = false;
             cyberGroupBox1.Rounding = true;
             cyberGroupBox1.RoundingInt = 20;
-            cyberGroupBox1.Size = new Size(718, 297);
+            cyberGroupBox1.Size = new Size(718, 384);
             cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             cyberGroupBox1.TabIndex = 13;
             cyberGroupBox1.Tag = "Cyber";
             cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox1.Timer_RGB = 300;
+            // 
+            // nightLabel4
+            // 
+            nightLabel4.AutoSize = true;
+            nightLabel4.BackColor = Color.Transparent;
+            nightLabel4.Font = new Font("Segoe UI", 9F);
+            nightLabel4.ForeColor = Color.White;
+            nightLabel4.Location = new Point(33, 22);
+            nightLabel4.Name = "nightLabel4";
+            nightLabel4.Size = new Size(17, 15);
+            nightLabel4.TabIndex = 10;
+            nightLabel4.Text = "Id";
+            // 
+            // txtId
+            // 
+            txtId.ActiveBorderColor = Color.FromArgb(242, 93, 89);
+            txtId.BackColor = Color.FromArgb(43, 48, 67);
+            txtId.BaseBackColor = Color.FromArgb(43, 48, 67);
+            txtId.ColorBordersOnEnter = true;
+            txtId.DisableBorderColor = Color.FromArgb(60, 63, 80);
+            txtId.Enabled = false;
+            txtId.Font = new Font("Segoe UI", 10F);
+            txtId.ForeColor = Color.FromArgb(127, 131, 140);
+            txtId.Image = null;
+            txtId.Location = new Point(32, 53);
+            txtId.MaxLength = 32767;
+            txtId.Multiline = false;
+            txtId.Name = "txtId";
+            txtId.ReadOnly = false;
+            txtId.ShortcutsEnabled = true;
+            txtId.ShowBottomBorder = true;
+            txtId.ShowTopBorder = true;
+            txtId.Size = new Size(651, 50);
+            txtId.TabIndex = 9;
+            txtId.Text = "#";
+            txtId.TextAlignment = HorizontalAlignment.Left;
+            txtId.UseSystemPasswordChar = false;
+            txtId.Watermark = "";
+            txtId.WatermarkColor = Color.FromArgb(116, 120, 129);
+            txtId.Enter += txtId_Enter;
+            txtId.Leave += txtId_Leave;
             // 
             // txtSenha
             // 
@@ -288,10 +334,11 @@
             txtSenha.BaseBackColor = Color.FromArgb(43, 48, 67);
             txtSenha.ColorBordersOnEnter = true;
             txtSenha.DisableBorderColor = Color.FromArgb(60, 63, 80);
+            txtSenha.Enabled = false;
             txtSenha.Font = new Font("Segoe UI", 10F);
             txtSenha.ForeColor = Color.FromArgb(127, 131, 140);
             txtSenha.Image = null;
-            txtSenha.Location = new Point(29, 219);
+            txtSenha.Location = new Point(32, 313);
             txtSenha.MaxLength = 32767;
             txtSenha.Multiline = false;
             txtSenha.Name = "txtSenha";
@@ -315,7 +362,7 @@
             nightLabel3.BackColor = Color.Transparent;
             nightLabel3.Font = new Font("Segoe UI", 9F);
             nightLabel3.ForeColor = Color.White;
-            nightLabel3.Location = new Point(29, 191);
+            nightLabel3.Location = new Point(32, 285);
             nightLabel3.Name = "nightLabel3";
             nightLabel3.Size = new Size(39, 15);
             nightLabel3.TabIndex = 6;
@@ -328,10 +375,11 @@
             txtEmail.BaseBackColor = Color.FromArgb(43, 48, 67);
             txtEmail.ColorBordersOnEnter = true;
             txtEmail.DisableBorderColor = Color.FromArgb(60, 63, 80);
+            txtEmail.Enabled = false;
             txtEmail.Font = new Font("Segoe UI", 10F);
             txtEmail.ForeColor = Color.FromArgb(127, 131, 140);
             txtEmail.Image = null;
-            txtEmail.Location = new Point(29, 131);
+            txtEmail.Location = new Point(32, 225);
             txtEmail.MaxLength = 32767;
             txtEmail.Multiline = false;
             txtEmail.Name = "txtEmail";
@@ -355,7 +403,7 @@
             nightLabel2.BackColor = Color.Transparent;
             nightLabel2.Font = new Font("Segoe UI", 9F);
             nightLabel2.ForeColor = Color.White;
-            nightLabel2.Location = new Point(29, 103);
+            nightLabel2.Location = new Point(32, 197);
             nightLabel2.Name = "nightLabel2";
             nightLabel2.Size = new Size(36, 15);
             nightLabel2.TabIndex = 4;
@@ -368,10 +416,11 @@
             txtNome.BaseBackColor = Color.FromArgb(43, 48, 67);
             txtNome.ColorBordersOnEnter = true;
             txtNome.DisableBorderColor = Color.FromArgb(60, 63, 80);
+            txtNome.Enabled = false;
             txtNome.Font = new Font("Segoe UI", 10F);
             txtNome.ForeColor = Color.FromArgb(127, 131, 140);
             txtNome.Image = null;
-            txtNome.Location = new Point(29, 45);
+            txtNome.Location = new Point(32, 139);
             txtNome.MaxLength = 32767;
             txtNome.Multiline = false;
             txtNome.Name = "txtNome";
@@ -395,7 +444,7 @@
             nightLabel1.BackColor = Color.Transparent;
             nightLabel1.Font = new Font("Segoe UI", 9F);
             nightLabel1.ForeColor = Color.White;
-            nightLabel1.Location = new Point(29, 18);
+            nightLabel1.Location = new Point(32, 112);
             nightLabel1.Name = "nightLabel1";
             nightLabel1.Size = new Size(40, 15);
             nightLabel1.TabIndex = 2;
@@ -405,7 +454,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 694);
+            ClientSize = new Size(800, 751);
             Controls.Add(cyberGroupBox1);
             Controls.Add(nightForm1);
             FormBorderStyle = FormBorderStyle.None;
@@ -438,5 +487,7 @@
         private ReaLTaiizor.Controls.NightButton btnSalvar;
         private ReaLTaiizor.Controls.NightButton btnVoltar;
         private DataGridView dgvUsuario;
+        private ReaLTaiizor.Controls.NightLabel nightLabel4;
+        private ReaLTaiizor.Controls.NightTextBox txtId;
     }
 }
