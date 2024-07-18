@@ -16,6 +16,8 @@ namespace SistemaDeComandas.Forms
         bool isFirstEmail = true;
         bool isFirstSenha = true;
         bool isFirstId = true;
+        bool isNovoActived = false;
+
         private bool ehNovoUsuario;
 
         public FrmUsuario()
@@ -110,7 +112,7 @@ namespace SistemaDeComandas.Forms
 
         private void txtNome_Leave(object sender, EventArgs e)
         {
-            if (txtNome.Text == string.Empty)
+            if (txtNome.Text == string.Empty && !isNovoActived)
             {
                 txtNome.Text = "John Doe";
                 isFirstNome = true;
@@ -119,7 +121,7 @@ namespace SistemaDeComandas.Forms
 
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-            if (txtEmail.Text == string.Empty)
+            if (txtEmail.Text == string.Empty && !isNovoActived)
             {
                 txtEmail.Text = "johndoe@example.com";
                 isFirstEmail = true;
@@ -128,19 +130,10 @@ namespace SistemaDeComandas.Forms
 
         private void txtSenha_Leave(object sender, EventArgs e)
         {
-            if (txtSenha.Text == string.Empty)
+            if (txtSenha.Text == string.Empty && !isNovoActived)
             {
                 txtSenha.Text = "********";
                 isFirstSenha = true;
-            }
-        }
-
-        private void txtId_Leave(object sender, EventArgs e)
-        {
-            if (txtId.Text == string.Empty)
-            {
-                txtId.Text = "#";
-                isFirstId = true;
             }
         }
 
@@ -198,7 +191,7 @@ namespace SistemaDeComandas.Forms
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-
+            isNovoActived = true;
             // informa que esta cadastrando um novo usuario
             ehNovoUsuario = true;
             // limpa os campos
@@ -212,6 +205,10 @@ namespace SistemaDeComandas.Forms
             txtNome.Enabled = true;
             txtEmail.Enabled = true;
             txtSenha.Enabled = true;
+
+            labelNome.Text = "Nome ✔";
+            labelEmail.Text = "Email ✔";
+            labelSenha.Text = "Senha ✔";
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

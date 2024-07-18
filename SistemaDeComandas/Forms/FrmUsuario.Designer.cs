@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             nightForm1 = new ReaLTaiizor.Forms.NightForm();
             dgvUsuario = new DataGridView();
             btnVoltar = new ReaLTaiizor.Controls.NightButton();
@@ -40,14 +40,14 @@
             btnExcluir = new ReaLTaiizor.Controls.NightButton();
             btnNovo = new ReaLTaiizor.Controls.NightButton();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
-            nightLabel4 = new ReaLTaiizor.Controls.NightLabel();
+            labelId = new ReaLTaiizor.Controls.NightLabel();
             txtId = new ReaLTaiizor.Controls.NightTextBox();
             txtSenha = new ReaLTaiizor.Controls.NightTextBox();
-            nightLabel3 = new ReaLTaiizor.Controls.NightLabel();
+            labelSenha = new ReaLTaiizor.Controls.NightLabel();
             txtEmail = new ReaLTaiizor.Controls.NightTextBox();
-            nightLabel2 = new ReaLTaiizor.Controls.NightLabel();
+            labelEmail = new ReaLTaiizor.Controls.NightLabel();
             txtNome = new ReaLTaiizor.Controls.NightTextBox();
-            nightLabel1 = new ReaLTaiizor.Controls.NightLabel();
+            labelNome = new ReaLTaiizor.Controls.NightLabel();
             nightForm1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
             cyberGroupBox1.SuspendLayout();
@@ -79,33 +79,33 @@
             // 
             // dgvUsuario
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvUsuario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvUsuario.DefaultCellStyle = dataGridViewCellStyle5;
             dgvUsuario.Location = new Point(58, 439);
             dgvUsuario.Name = "dgvUsuario";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvUsuario.Size = new Size(675, 180);
             dgvUsuario.TabIndex = 0;
             dgvUsuario.CellClick += dgvUsuario_CellClick;
@@ -260,14 +260,14 @@
             cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
             cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
             cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox1.Controls.Add(nightLabel4);
+            cyberGroupBox1.Controls.Add(labelId);
             cyberGroupBox1.Controls.Add(txtId);
             cyberGroupBox1.Controls.Add(txtSenha);
-            cyberGroupBox1.Controls.Add(nightLabel3);
+            cyberGroupBox1.Controls.Add(labelSenha);
             cyberGroupBox1.Controls.Add(txtEmail);
-            cyberGroupBox1.Controls.Add(nightLabel2);
+            cyberGroupBox1.Controls.Add(labelEmail);
             cyberGroupBox1.Controls.Add(txtNome);
-            cyberGroupBox1.Controls.Add(nightLabel1);
+            cyberGroupBox1.Controls.Add(labelNome);
             cyberGroupBox1.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             cyberGroupBox1.ForeColor = Color.FromArgb(245, 245, 245);
             cyberGroupBox1.Lighting = false;
@@ -286,17 +286,17 @@
             cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox1.Timer_RGB = 300;
             // 
-            // nightLabel4
+            // labelId
             // 
-            nightLabel4.AutoSize = true;
-            nightLabel4.BackColor = Color.Transparent;
-            nightLabel4.Font = new Font("Segoe UI", 9F);
-            nightLabel4.ForeColor = Color.White;
-            nightLabel4.Location = new Point(33, 22);
-            nightLabel4.Name = "nightLabel4";
-            nightLabel4.Size = new Size(17, 15);
-            nightLabel4.TabIndex = 10;
-            nightLabel4.Text = "Id";
+            labelId.AutoSize = true;
+            labelId.BackColor = Color.Transparent;
+            labelId.Font = new Font("Segoe UI", 9F);
+            labelId.ForeColor = Color.White;
+            labelId.Location = new Point(33, 22);
+            labelId.Name = "labelId";
+            labelId.Size = new Size(30, 15);
+            labelId.TabIndex = 10;
+            labelId.Text = "Id 🔒";
             // 
             // txtId
             // 
@@ -325,7 +325,6 @@
             txtId.Watermark = "";
             txtId.WatermarkColor = Color.FromArgb(116, 120, 129);
             txtId.Enter += txtId_Enter;
-            txtId.Leave += txtId_Leave;
             // 
             // txtSenha
             // 
@@ -356,17 +355,17 @@
             txtSenha.Enter += txtSenha_Enter;
             txtSenha.Leave += txtSenha_Leave;
             // 
-            // nightLabel3
+            // labelSenha
             // 
-            nightLabel3.AutoSize = true;
-            nightLabel3.BackColor = Color.Transparent;
-            nightLabel3.Font = new Font("Segoe UI", 9F);
-            nightLabel3.ForeColor = Color.White;
-            nightLabel3.Location = new Point(32, 285);
-            nightLabel3.Name = "nightLabel3";
-            nightLabel3.Size = new Size(39, 15);
-            nightLabel3.TabIndex = 6;
-            nightLabel3.Text = "Senha";
+            labelSenha.AutoSize = true;
+            labelSenha.BackColor = Color.Transparent;
+            labelSenha.Font = new Font("Segoe UI", 9F);
+            labelSenha.ForeColor = Color.White;
+            labelSenha.Location = new Point(32, 285);
+            labelSenha.Name = "labelSenha";
+            labelSenha.Size = new Size(52, 15);
+            labelSenha.TabIndex = 6;
+            labelSenha.Text = "Senha 🔒";
             // 
             // txtEmail
             // 
@@ -397,17 +396,17 @@
             txtEmail.Enter += txtEmail_Enter;
             txtEmail.Leave += txtEmail_Leave;
             // 
-            // nightLabel2
+            // labelEmail
             // 
-            nightLabel2.AutoSize = true;
-            nightLabel2.BackColor = Color.Transparent;
-            nightLabel2.Font = new Font("Segoe UI", 9F);
-            nightLabel2.ForeColor = Color.White;
-            nightLabel2.Location = new Point(32, 197);
-            nightLabel2.Name = "nightLabel2";
-            nightLabel2.Size = new Size(36, 15);
-            nightLabel2.TabIndex = 4;
-            nightLabel2.Text = "Email";
+            labelEmail.AutoSize = true;
+            labelEmail.BackColor = Color.Transparent;
+            labelEmail.Font = new Font("Segoe UI", 9F);
+            labelEmail.ForeColor = Color.White;
+            labelEmail.Location = new Point(32, 197);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(49, 15);
+            labelEmail.TabIndex = 4;
+            labelEmail.Text = "Email 🔒";
             // 
             // txtNome
             // 
@@ -438,17 +437,17 @@
             txtNome.Enter += txtNome_Enter;
             txtNome.Leave += txtNome_Leave;
             // 
-            // nightLabel1
+            // labelNome
             // 
-            nightLabel1.AutoSize = true;
-            nightLabel1.BackColor = Color.Transparent;
-            nightLabel1.Font = new Font("Segoe UI", 9F);
-            nightLabel1.ForeColor = Color.White;
-            nightLabel1.Location = new Point(32, 112);
-            nightLabel1.Name = "nightLabel1";
-            nightLabel1.Size = new Size(40, 15);
-            nightLabel1.TabIndex = 2;
-            nightLabel1.Text = "Nome";
+            labelNome.AutoSize = true;
+            labelNome.BackColor = Color.Transparent;
+            labelNome.Font = new Font("Segoe UI", 9F);
+            labelNome.ForeColor = Color.White;
+            labelNome.Location = new Point(32, 112);
+            labelNome.Name = "labelNome";
+            labelNome.Size = new Size(53, 15);
+            labelNome.TabIndex = 2;
+            labelNome.Text = "Nome 🔒";
             // 
             // FrmUsuario
             // 
@@ -476,18 +475,18 @@
         private ReaLTaiizor.Controls.NightButton btnNovo;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
         private ReaLTaiizor.Controls.NightTextBox txtSenha;
-        private ReaLTaiizor.Controls.NightLabel nightLabel3;
+        private ReaLTaiizor.Controls.NightLabel labelSenha;
         private ReaLTaiizor.Controls.NightTextBox txtEmail;
-        private ReaLTaiizor.Controls.NightLabel nightLabel2;
+        private ReaLTaiizor.Controls.NightLabel labelEmail;
         private ReaLTaiizor.Controls.NightTextBox txtNome;
-        private ReaLTaiizor.Controls.NightLabel nightLabel1;
+        private ReaLTaiizor.Controls.NightLabel labelNome;
         private ReaLTaiizor.Controls.NightButton btnExcluir;
         private ReaLTaiizor.Controls.NightButton btnEditar;
         private ReaLTaiizor.Controls.NightButton btnCancelar;
         private ReaLTaiizor.Controls.NightButton btnSalvar;
         private ReaLTaiizor.Controls.NightButton btnVoltar;
         private DataGridView dgvUsuario;
-        private ReaLTaiizor.Controls.NightLabel nightLabel4;
+        private ReaLTaiizor.Controls.NightLabel labelId;
         private ReaLTaiizor.Controls.NightTextBox txtId;
     }
 }
